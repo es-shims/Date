@@ -1,0 +1,32 @@
+{
+	"name": "date",
+	"version": "1.0.2",
+	"description": "ES spec-compliant `Date` shim/polyfill/replacement that works as far down as ES3",
+	"main": "index.js",
+	"exports": {
+		".": "./index.js",
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/es-shims/Date.git"
+	},
+	"keywords": [
+		"shim",
+		"polyfill",
+		"javascript",
+		"ecmascript",
+		"es-shim",
+		"API",
+		"Date"
+	],
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/es-shims/Date/issues"
+	},
+	"homepage": "https://github.com/es-shims/Date#readme"
+}
