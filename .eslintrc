@@ -1,0 +1,65 @@
+{
+	"root": true,
+
+	"extends": "@ljharb",
+
+	"rules": {
+		"array-bracket-newline": "off",
+		"complexity": "off",
+		"func-name-matching": "off",
+		"id-length": "warn",
+		"multiline-comment-style": "off",
+		"new-cap": ["error", {
+			"capIsNewExceptions": [
+				"CreateDataPropertyOrThrow",
+				"CreateMethodProperty",
+				"GetIntrinsic",
+				"GetIterator",
+				"Invoke",
+				"IsArray",
+				"IterableToList",
+				"OrdinarySetPrototypeOf",
+				"ToObject",
+				"ToPrimitive",
+				"Type"
+			],
+		}],
+	},
+
+	"overrides": [
+		{
+			"files": "test/*/tests.js",
+			"rules": {
+				"max-lines-per-function": "off",
+			},
+		},
+		{
+			"files": [
+				"test/*/index.js",
+				"test/*/implementation.js",
+			],
+			"rules": {
+				"no-useless-call": "off",
+			},
+		},
+		{
+			"files": [
+				"Date.parse/implementation.js",
+				"Date.prototype.toDateString/implementation.js",
+				"Date.prototype.toISOString/implementation.js",
+				"Date.prototype.toString/implementation.js",
+				"Date.prototype.toUTCString/implementation.js",
+				"helpers/dayFromMonth.js",
+			],
+			"rules": {
+				"operator-linebreak": ["error", "before"],
+			},
+		},
+		{
+			"files": "Date/implementation.js",
+			"rules": {
+				"max-params": "off",
+			},
+		},
+	],
+}

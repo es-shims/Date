@@ -2,13 +2,93 @@
 	"name": "date",
 	"version": "1.0.2",
 	"description": "ES spec-compliant `Date` shim/polyfill/replacement that works as far down as ES3",
-	"main": "index.js",
+	"contributors": [
+		{
+			"name": "Jordan Harband",
+			"email": "ljharb@gmail.com",
+			"url": "http://ljharb.codes"
+		}
+	],
+	"main": "index.json",
 	"exports": {
-		".": "./index.js",
+		".": "./index.json",
+		"./auto": "./auto.js",
+		"./shim": "./shim.js",
+		"./Date": "./Date/index.js",
+		"./Date/auto": "./Date/auto.js",
+		"./Date/polyfill": "./Date/polyfill.js",
+		"./Date/implementation": "./Date/implementation.js",
+		"./Date/shim": "./Date/shim.js",
+		"./Date.prototype.getFullYear": "./Date.prototype.getFullYear/index.js",
+		"./Date.prototype.getFullYear/auto": "./Date.prototype.getFullYear/auto.js",
+		"./Date.prototype.getFullYear/polyfill": "./Date.prototype.getFullYear/polyfill.js",
+		"./Date.prototype.getFullYear/implementation": "./Date.prototype.getFullYear/implementation.js",
+		"./Date.prototype.getFullYear/shim": "./Date.prototype.getFullYear/shim.js",
+		"./Date.prototype.getMonth": "./Date.prototype.getMonth/index.js",
+		"./Date.prototype.getMonth/auto": "./Date.prototype.getMonth/auto.js",
+		"./Date.prototype.getMonth/polyfill": "./Date.prototype.getMonth/polyfill.js",
+		"./Date.prototype.getMonth/implementation": "./Date.prototype.getMonth/implementation.js",
+		"./Date.prototype.getMonth/shim": "./Date.prototype.getMonth/shim.js",
+		"./Date.prototype.getDate": "./Date.prototype.getDate/index.js",
+		"./Date.prototype.getDate/auto": "./Date.prototype.getDate/auto.js",
+		"./Date.prototype.getDate/polyfill": "./Date.prototype.getDate/polyfill.js",
+		"./Date.prototype.getDate/implementation": "./Date.prototype.getDate/implementation.js",
+		"./Date.prototype.getDate/shim": "./Date.prototype.getDate/shim.js",
+		"./Date.prototype.getUTCFullYear": "./Date.prototype.getUTCFullYear/index.js",
+		"./Date.prototype.getUTCFullYear/auto": "./Date.prototype.getUTCFullYear/auto.js",
+		"./Date.prototype.getUTCFullYear/polyfill": "./Date.prototype.getUTCFullYear/polyfill.js",
+		"./Date.prototype.getUTCFullYear/implementation": "./Date.prototype.getUTCFullYear/implementation.js",
+		"./Date.prototype.getUTCFullYear/shim": "./Date.prototype.getUTCFullYear/shim.js",
+		"./Date.prototype.toUTCString": "./Date.prototype.toUTCString/index.js",
+		"./Date.prototype.toUTCString/auto": "./Date.prototype.toUTCString/auto.js",
+		"./Date.prototype.toUTCString/polyfill": "./Date.prototype.toUTCString/polyfill.js",
+		"./Date.prototype.toUTCString/implementation": "./Date.prototype.toUTCString/implementation.js",
+		"./Date.prototype.toUTCString/shim": "./Date.prototype.toUTCString/shim.js",
+		"./Date.prototype.toDateString": "./Date.prototype.toDateString/index.js",
+		"./Date.prototype.toDateString/auto": "./Date.prototype.toDateString/auto.js",
+		"./Date.prototype.toDateString/polyfill": "./Date.prototype.toDateString/polyfill.js",
+		"./Date.prototype.toDateString/implementation": "./Date.prototype.toDateString/implementation.js",
+		"./Date.prototype.toDateString/shim": "./Date.prototype.toDateString/shim.js",
+		"./Date.prototype.toString": "./Date.prototype.toString/index.js",
+		"./Date.prototype.toString/auto": "./Date.prototype.toString/auto.js",
+		"./Date.prototype.toString/polyfill": "./Date.prototype.toString/polyfill.js",
+		"./Date.prototype.toString/implementation": "./Date.prototype.toString/implementation.js",
+		"./Date.prototype.toString/shim": "./Date.prototype.toString/shim.js",
+		"./Date.prototype.toISOString": "./Date.prototype.toISOString/index.js",
+		"./Date.prototype.toISOString/auto": "./Date.prototype.toISOString/auto.js",
+		"./Date.prototype.toISOString/polyfill": "./Date.prototype.toISOString/polyfill.js",
+		"./Date.prototype.toISOString/implementation": "./Date.prototype.toISOString/implementation.js",
+		"./Date.prototype.toISOString/shim": "./Date.prototype.toISOString/shim.js",
+		"./Date.prototype.toJSON": "./Date.prototype.toJSON/index.js",
+		"./Date.prototype.toJSON/auto": "./Date.prototype.toJSON/auto.js",
+		"./Date.prototype.toJSON/polyfill": "./Date.prototype.toJSON/polyfill.js",
+		"./Date.prototype.toJSON/implementation": "./Date.prototype.toJSON/implementation.js",
+		"./Date.prototype.toJSON/shim": "./Date.prototype.toJSON/shim.js",
+		"./Date.now": "./Date.now/index.js",
+		"./Date.now/auto": "./Date.now/auto.js",
+		"./Date.now/polyfill": "./Date.now/polyfill.js",
+		"./Date.now/implementation": "./Date.now/implementation.js",
+		"./Date.now/shim": "./Date.now/shim.js",
+		"./Date.parse": "./Date.parse/index.js",
+		"./Date.parse/auto": "./Date.parse/auto.js",
+		"./Date.parse/polyfill": "./Date.parse/polyfill.js",
+		"./Date.parse/implementation": "./Date.parse/implementation.js",
+		"./Date.parse/shim": "./Date.parse/shim.js",
 		"./package.json": "./package.json"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"prepack": "npmignore --auto --commentLines=autogenerated",
+		"version": "auto-changelog && git add CHANGELOG.md",
+		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+		"prepublish": "not-in-publish || npm run prepublishOnly",
+		"prepublishOnly": "safe-publish-latest",
+		"prelint": "evalmd README.md",
+		"lint": "eslint .",
+		"postlint": "es-shim-api --multi --bound",
+		"pretest": "npm run lint",
+		"test": "npm run tests-only",
+		"posttest": "aud --production",
+		"tests-only": "nyc tape 'test/**/*.js'"
 	},
 	"repository": {
 		"type": "git",
@@ -24,9 +104,57 @@
 		"Date"
 	],
 	"author": "Jordan Harband <ljharb@gmail.com>",
+	"funding": {
+		"url": "https://github.com/sponsors/ljharb"
+	},
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/es-shims/Date/issues"
 	},
-	"homepage": "https://github.com/es-shims/Date#readme"
+	"homepage": "https://github.com/es-shims/Date#readme",
+	"dependencies": {
+		"call-bind": "^1.0.2",
+		"define-properties": "^1.1.4",
+		"es-abstract": "^1.20.1",
+		"get-intrinsic": "^1.1.1",
+		"globalthis": "^1.0.3"
+	},
+	"devDependencies": {
+		"@es-shims/api": "^2.2.3",
+		"@ljharb/eslint-config": "^21.0.0",
+		"array.prototype.map": "^1.0.4",
+		"aud": "^2.0.0",
+		"auto-changelog": "^2.4.0",
+		"es6-shim": "^0.35.6",
+		"eslint": "=8.8.0",
+		"evalmd": "^0.0.19",
+		"for-each": "^0.3.3",
+		"function.prototype.name": "^1.1.5",
+		"has-property-descriptors": "^1.0.0",
+		"has-strict-mode": "^1.0.1",
+		"npmignore": "^0.3.0",
+		"nyc": "^10.3.2",
+		"object-inspect": "^1.12.1",
+		"safe-publish-latest": "^2.0.0",
+		"tape": "^5.5.3"
+	},
+	"engines": {
+		"node": ">= 0.4"
+	},
+	"auto-changelog": {
+		"output": "CHANGELOG.md",
+		"template": "keepachangelog",
+		"unreleased": false,
+		"commitLimit": false,
+		"backfillLimit": false,
+		"hideCredit": true
+	},
+	"testling": {
+		"files": "./test/**/*.js"
+	},
+	"publishConfig": {
+		"ignore": [
+			".github/workflows"
+		]
+	}
 }
