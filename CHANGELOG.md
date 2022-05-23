@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.0.0](https://github.com/es-shims/Date/compare/v1.0.2...v2.0.0) - 2022-05-23
+
+### Commits
+
+- Initial implementation, tests, readme [`070cfb5`](https://github.com/es-shims/Date/commit/070cfb58613652f8c424a6dc326244e6ce339d7a)
+- Initial commit [`60d169a`](https://github.com/es-shims/Date/commit/60d169a9c3b550085a2b5acfedd544dd83c7e81a)
+- npm init [`aed08b5`](https://github.com/es-shims/Date/commit/aed08b547b26ef13d6ee9fe6c2036479cb53931f)
+- Only apps should have lockfiles [`b51a909`](https://github.com/es-shims/Date/commit/b51a9099f3dec163fc64099e71844531bbd9e766)
+
 ## [v1.0.2](https://github.com/es-shims/Date/compare/v1.0.1...v1.0.2) - 2014-08-29
 
 ### Commits
