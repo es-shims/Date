@@ -1,6 +1,6 @@
 'use strict';
 
-var regexTester = require('es-abstract/helpers/regexTester');
+var regexTester = require('safe-regex-test');
 
 var hasNegativeYear = regexTester(/-000001/);
 var negativeDate = -62198755200000;

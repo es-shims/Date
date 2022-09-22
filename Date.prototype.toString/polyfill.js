@@ -1,6 +1,6 @@
 'use strict';
 
-var regexTester = require('es-abstract/helpers/regexTester');
+var regexTester = require('safe-regex-test');
 
 var callBind = require('call-bind');
 
