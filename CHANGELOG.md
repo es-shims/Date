@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.0.1](https://github.com/es-shims/Date/compare/v2.0.0...v2.0.1) - 2022-09-22
+
+### Commits
+
+- [Refactor] use `safe-regex-test` [`0df6d6f`](https://github.com/es-shims/Date/commit/0df6d6f05e8ef000c0509c2106352d03e8270bbd)
+- [Dev Deps] update `aud`, `object-inspect`, `tape` [`3b8c35e`](https://github.com/es-shims/Date/commit/3b8c35eddac1654cf469677da1102dcb52304636)
+- [Deps] update `es-abstract`, `get-intrinsic` [`37defbc`](https://github.com/es-shims/Date/commit/37defbcef6c673e564596a8c3496e3de90a1c0c3)
+
 ## [v2.0.0](https://github.com/es-shims/Date/compare/v1.0.2...v2.0.0) - 2022-05-23
 
 ### Commits
