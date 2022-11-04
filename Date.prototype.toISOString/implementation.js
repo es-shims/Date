@@ -2,8 +2,8 @@
 
 var callBound = require('call-bind/callBound');
 var GetIntrinsic = require('get-intrinsic');
-var thisTimeValue = require('es-abstract/2021/thisTimeValue');
-var abs = require('es-abstract/2021/abs');
+var thisTimeValue = require('es-abstract/2022/thisTimeValue');
+var abs = require('es-abstract/2022/abs');
 
 var $RangeError = GetIntrinsic('%RangeError%');
 

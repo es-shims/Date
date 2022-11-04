@@ -1,9 +1,9 @@
 'use strict';
 
-var Invoke = require('es-abstract/2021/Invoke');
-var ToObject = require('es-abstract/2021/ToObject');
-var ToPrimitive = require('es-abstract/2021/ToPrimitive');
-var Type = require('es-abstract/2021/Type');
+var Invoke = require('es-abstract/2022/Invoke');
+var ToObject = require('es-abstract/2022/ToObject');
+var ToPrimitive = require('es-abstract/2022/ToPrimitive');
+var Type = require('es-abstract/2022/Type');
 
 var isFinite = require('es-abstract/helpers/isFinite');
 

@@ -1,7 +1,7 @@
 'use strict';
 
 var callBind = require('call-bind');
-var thisTimeValue = require('es-abstract/2021/thisTimeValue');
+var thisTimeValue = require('es-abstract/2022/thisTimeValue');
 
 var daysInMonth = require('../helpers/daysInMonth');
 

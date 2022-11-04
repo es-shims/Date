@@ -1,7 +1,7 @@
 'use strict';
 
 var callBind = require('call-bind');
-var thisTimeValue = require('es-abstract/2021/thisTimeValue');
+var thisTimeValue = require('es-abstract/2022/thisTimeValue');
 
 // not using GetIntrinsic here intentionally, to not prime its cache
 var $getUTCDay = callBind(Date.prototype.getUTCDay);

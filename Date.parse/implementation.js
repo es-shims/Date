@@ -5,7 +5,7 @@ var GetIntrinsic = require('get-intrinsic');
 var callBind = require('call-bind');
 var callBound = require('call-bind/callBound');
 
-var floor = require('es-abstract/2021/floor');
+var floor = require('es-abstract/2022/floor');
 var isNaN = require('es-abstract/helpers/isNaN');
 
 var dayFromMonth = require('../helpers/dayFromMonth');
