@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.0.2](https://github.com/es-shims/Date/compare/v2.0.1...v2.0.2) - 2022-11-03
+
+### Commits
+
+- [Deps] update `es-abstract` [`fb1349f`](https://github.com/es-shims/Date/commit/fb1349fbf41fc6da52eb66265024dc9fa725327c)
+- [actions] update rebase action to use reusable workflow [`043123b`](https://github.com/es-shims/Date/commit/043123b8e0e73a80209f285dfde6687e8cf97c93)
+- [Dev Deps] update `array.prototype.map` [`8aa2887`](https://github.com/es-shims/Date/commit/8aa2887414c8c73916c60569477da5cbeb086ffa)
+
 ## [v2.0.1](https://github.com/es-shims/Date/compare/v2.0.0...v2.0.1) - 2022-09-22
 
 ### Commits
