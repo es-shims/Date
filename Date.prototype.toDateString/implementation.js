@@ -1,7 +1,7 @@
 'use strict';
 
 var callBound = require('call-bind/callBound');
-var thisTimeValue = require('es-abstract/2022/thisTimeValue');
+var thisTimeValue = require('es-abstract/2023/thisTimeValue');
 
 var $getDay = callBound('Date.prototype.getDay');
 var $getDate = require('../Date.prototype.getDate');
