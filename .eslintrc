@@ -24,6 +24,9 @@
 				"Type"
 			],
 		}],
+		"no-implicit-coercion": ["error", {
+			"number": false,
+		}],
 	},
 
 	"overrides": [

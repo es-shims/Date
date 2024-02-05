@@ -11,7 +11,6 @@ var isNaN = require('es-abstract/helpers/isNaN');
 var dayFromMonth = require('../helpers/dayFromMonth');
 
 var $Date = require('../cache');
-var $Number = GetIntrinsic('%Number%');
 var pow = GetIntrinsic('%Math.pow%');
 
 var maxSafeUnsigned32Bit = pow(2, 31) - 1;
@@ -56,7 +55,7 @@ var toUTC = function toUTC(t) {
 		s += sToShift;
 		ms -= sToShift * 1e3;
 	}
-	return $Number(new $Date(1970, 0, 1, 0, 0, s, ms));
+	return +new $Date(1970, 0, 1, 0, 0, s, ms);
 };
 
 module.exports = function parse(string) {
@@ -65,20 +64,20 @@ module.exports = function parse(string) {
 		// parse months, days, hours, minutes, seconds, and milliseconds
 		// provide default values if necessary
 		// parse the UTC offset component
-		var year = $Number(match[1]);
-		var month = $Number(match[2] || 1) - 1;
-		var day = $Number(match[3] || 1) - 1;
-		var hour = $Number(match[4] || 0);
-		var minute = $Number(match[5] || 0);
-		var second = $Number(match[6] || 0);
-		var millisecond = floor($Number(match[7] || 0) * 1000);
+		var year = +match[1];
+		var month = +(match[2] || 1) - 1;
+		var day = +(match[3] || 1) - 1;
+		var hour = +(match[4] || 0);
+		var minute = +(match[5] || 0);
+		var second = +(match[6] || 0);
+		var millisecond = floor(+(match[7] || 0) * 1000);
 		// When time zone is missed, local offset should be used
 		// (ES 5.1 bug)
 		// see https://bugs.ecmascript.org/show_bug.cgi?id=112
-		var isLocalTime = !!(match[4] && !match[8]);
+		var isLocalTime = Boolean(match[4] && !match[8]);
 		var signOffset = match[9] === '-' ? 1 : -1;
-		var hourOffset = $Number(match[10] || 0);
-		var minuteOffset = $Number(match[11] || 0);
+		var hourOffset = +(match[10] || 0);
+		var minuteOffset = +(match[11] || 0);
 		var result;
 		var hasMinutesOrSecondsOrMilliseconds = minute > 0 || second > 0 || millisecond > 0;
 		if (

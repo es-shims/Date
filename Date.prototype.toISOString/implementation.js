@@ -1,11 +1,10 @@
 'use strict';
 
 var callBound = require('call-bind/callBound');
-var GetIntrinsic = require('get-intrinsic');
 var thisTimeValue = require('es-abstract/2023/thisTimeValue');
 var abs = require('es-abstract/2023/abs');
 
-var $RangeError = GetIntrinsic('%RangeError%');
+var $RangeError = require('es-errors/range');
 
 // not using GetIntrinsic here intentionally, to not prime its cache
 var $arraySlice = callBound('Array.prototype.slice');
