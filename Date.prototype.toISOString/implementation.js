@@ -2,7 +2,7 @@
 
 var callBound = require('call-bind/callBound');
 var thisTimeValue = require('es-abstract/2023/thisTimeValue');
-var abs = require('es-abstract/2023/abs');
+var abs = require('es-abstract/2024/abs');
 
 var $RangeError = require('es-errors/range');
 
