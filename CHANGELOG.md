@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.0.5](https://github.com/es-shims/Date/compare/v2.0.4...v2.0.5) - 2024-03-23
+
+### Commits
+
+- [Deps] update `call-bind`, `es-abstract`, `es-errors`, `get-intrinsic`, `safe-regex-test` [`e907103`](https://github.com/es-shims/Date/commit/e907103b0b20b31a3ddb9c18bf8a45ab0076185f)
+- [actions] remove redundant finisher [`0b526d5`](https://github.com/es-shims/Date/commit/0b526d598f3b6bd7452efc70d353bb96fe644734)
+- [meta] add missing entrypoints to `exports` [`bca3319`](https://github.com/es-shims/Date/commit/bca3319c4923a658552036378cf2f37513f9c96d)
+- [Dev Deps] update `array.prototype.map`, `has-property-descriptors`, `tape` [`d6b9c16`](https://github.com/es-shims/Date/commit/d6b9c1637d4a9b1ed6577c51efa5acb7b42697e2)
+
 ## [v2.0.4](https://github.com/es-shims/Date/compare/v2.0.3...v2.0.4) - 2024-02-04
 
 ### Commits
