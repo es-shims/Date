@@ -11,7 +11,7 @@
 
 ES spec-compliant shim for `Date`. Invoke its "shim" method to shim `Date` if it is unavailable or noncompliant.
 
-This package implements the [es-shim API](https://github.com/es-shims/api) “multi” interface. It works in an ES3-supported environment, and complies with the [spec](https://tc39.es/proposal-promise-any/#sec-date).
+This package implements the [es-shim API](https://github.com/es-shims/api) “multi” interface, v3. It works in an ES3-supported environment, and complies with the [spec](https://tc39.es/proposal-promise-any/#sec-date).
 
 Most common usage:
 ```js

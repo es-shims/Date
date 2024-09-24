@@ -94,7 +94,7 @@
 		"prepublishOnly": "safe-publish-latest",
 		"prelint": "evalmd README.md",
 		"lint": "eslint .",
-		"postlint": "es-shim-api --multi --bound",
+		"postlint": "es-shim-api --type=multi",
 		"pretest": "npm run lint",
 		"test": "npm run tests-only",
 		"posttest": "npx npm@'>=10.2' audit --production",
@@ -132,7 +132,7 @@
 		"safe-regex-test": "^1.0.3"
 	},
 	"devDependencies": {
-		"@es-shims/api": "^2.5.1",
+		"@es-shims/api": "^3.0.1",
 		"@ljharb/eslint-config": "^21.1.1",
 		"array.prototype.map": "^1.0.7",
 		"auto-changelog": "^2.5.0",
