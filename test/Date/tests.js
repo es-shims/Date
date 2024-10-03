@@ -201,7 +201,7 @@ module.exports = function (Date, t) {
 				st.equal(
 					result < 0 ? Math.ceil(result) : Math.floor(result),
 					59,
-					date + ' computes to ' + result + ' (which should be 59)'
+					date + ' (' + +date + ') computes to ' + result + ' (which should be 59)'
 				);
 			});
 		});
