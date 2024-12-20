@@ -5,7 +5,7 @@ var ToObject = require('es-abstract/2024/ToObject');
 var ToPrimitive = require('es-abstract/2024/ToPrimitive');
 var Type = require('es-abstract/2024/Type');
 
-var isFinite = require('es-abstract/helpers/isFinite');
+var isFinite = require('math-intrinsics/isFinite');
 
 // eslint-disable-next-line no-unused-vars
 module.exports = function toJSON(key) {

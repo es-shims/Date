@@ -3,20 +3,19 @@
 var GetIntrinsic = require('get-intrinsic');
 var defineProperties = require('define-properties');
 var thisTimeValue = require('es-abstract/helpers/timeValue');
-var floor = require('es-abstract/2024/floor');
+var floor = require('math-intrinsics/floor');
 
-var isNaN = require('es-abstract/helpers/isNaN');
+var $isNaN = require('math-intrinsics/isNaN');
+var maxSafeUnsigned32Bit = require('math-intrinsics/constants/maxArrayLength');
 var isPrimitive = require('es-abstract/helpers/isPrimitive');
 
 var $parse = require('../Date.parse/polyfill')();
 
 var $Date = require('../cache');
 
-var pow = GetIntrinsic('%Math.pow%');
 var $String = GetIntrinsic('%String%');
 
-var maxSafeUnsigned32Bit = pow(2, 31) - 1;
-var hasSafariSignedIntBug = isNaN(thisTimeValue(new $Date(1970, 0, 1, 0, 0, 0, maxSafeUnsigned32Bit + 1)));
+var hasSafariSignedIntBug = $isNaN(thisTimeValue(new $Date(1970, 0, 1, 0, 0, 0, maxSafeUnsigned32Bit + 1)));
 
 var DateShim = function Date(Y, M, D, h, m, s, ms) {
 	var length = arguments.length;
@@ -32,7 +31,7 @@ var DateShim = function Date(Y, M, D, h, m, s, ms) {
 			millis -= sToShift * 1e3;
 		}
 		var parsed = $parse(Y);
-		var hasNegTimestampParseBug = isNaN(parsed);
+		var hasNegTimestampParseBug = $isNaN(parsed);
 		date = length === 1 && $String(Y) === Y && !hasNegTimestampParseBug // isString(Y)
 		// We explicitly pass it through parse:
 			? new $Date(parsed)

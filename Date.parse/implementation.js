@@ -1,19 +1,15 @@
 'use strict';
 
-var GetIntrinsic = require('get-intrinsic');
-
 var callBind = require('call-bind');
-var callBound = require('call-bind/callBound');
+var callBound = require('call-bound');
 
-var floor = require('es-abstract/2024/floor');
-var isNaN = require('es-abstract/helpers/isNaN');
+var floor = require('math-intrinsics/floor');
+var $isNaN = require('math-intrinsics/isNaN');
+var maxSafeUnsigned32Bit = require('math-intrinsics/constants/maxArrayLength');
 
 var dayFromMonth = require('../helpers/dayFromMonth');
 
 var $Date = require('../cache');
-var pow = GetIntrinsic('%Math.pow%');
-
-var maxSafeUnsigned32Bit = pow(2, 31) - 1;
 
 // not using GetIntrinsic here intentionally, to not prime its cache
 var $parse = callBind.apply(Date.parse);
@@ -43,7 +39,7 @@ var isoDateExpression = /^(\d{4}|[+-]\d{6})(?:-(\d{2})(?:-(\d{2})(?:T(\d{2}):(\d
 
 var $exec = callBound('RegExp.prototype.exec');
 
-var hasSafariSignedIntBug = isNaN(new Date(1970, 0, 1, 0, 0, 0, maxSafeUnsigned32Bit + 1).getTime());
+var hasSafariSignedIntBug = $isNaN(new Date(1970, 0, 1, 0, 0, 0, maxSafeUnsigned32Bit + 1).getTime());
 
 var toUTC = function toUTC(t) {
 	var s = 0;

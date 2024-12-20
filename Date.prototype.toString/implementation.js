@@ -1,11 +1,10 @@
 'use strict';
 
-var GetIntrinsic = require('get-intrinsic');
-var callBound = require('call-bind/callBound');
+var callBound = require('call-bound');
 var thisTimeValue = require('es-abstract/helpers/timeValue');
 
-var abs = GetIntrinsic('%Math.abs%');
-var floor = GetIntrinsic('%Math.floor%');
+var abs = require('math-intrinsics/abs');
+var floor = require('math-intrinsics/floor');
 
 var monthNames = require('../helpers/monthNames');
 var dayNames = require('../helpers/dayNames');
