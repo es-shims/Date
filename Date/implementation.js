@@ -2,7 +2,7 @@
 
 var GetIntrinsic = require('get-intrinsic');
 var defineProperties = require('define-properties');
-var thisTimeValue = require('es-abstract/2023/thisTimeValue');
+var thisTimeValue = require('es-abstract/helpers/timeValue');
 var floor = require('es-abstract/2024/floor');
 
 var isNaN = require('es-abstract/helpers/isNaN');

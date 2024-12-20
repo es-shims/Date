@@ -2,7 +2,7 @@
 
 var GetIntrinsic = require('get-intrinsic');
 var callBound = require('call-bind/callBound');
-var thisTimeValue = require('es-abstract/2023/thisTimeValue');
+var thisTimeValue = require('es-abstract/helpers/timeValue');
 
 var abs = GetIntrinsic('%Math.abs%');
 var floor = GetIntrinsic('%Math.floor%');

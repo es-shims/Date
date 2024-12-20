@@ -1,7 +1,7 @@
 'use strict';
 
 var callBound = require('call-bind/callBound');
-var thisTimeValue = require('es-abstract/2023/thisTimeValue');
+var thisTimeValue = require('es-abstract/helpers/timeValue');
 var abs = require('es-abstract/2024/abs');
 
 var $RangeError = require('es-errors/range');
