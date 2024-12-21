@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.0.6](https://github.com/es-shims/Date/compare/v2.0.5...v2.0.6) - 2024-12-21
+
+### Commits
+
+- [actions] split out node 10-20, and 20+ [`546c630`](https://github.com/es-shims/Date/commit/546c630e49d14eda5ede3e955531d947a779ec37)
+- [Refactor] use `call-bound`, `math-intrinsics` directly [`1968c3f`](https://github.com/es-shims/Date/commit/1968c3f9445b1b8961120fd3ada3718eb0620314)
+- [Deps] update `call-bind`, `es-abstract`, `get-intrinsic`, `safe-regex-test` [`a85fc9e`](https://github.com/es-shims/Date/commit/a85fc9ea8ba24139740b7941b83928a3f68e56fb)
+- [Dev Deps] update `@es-shims/api`, `@ljharb/eslint-config`, `auto-changelog`, `object-inspect`, `tape` [`3bc01f1`](https://github.com/es-shims/Date/commit/3bc01f18ff7a22ba62ca76281783b91b50e4b6ff)
+- [Dev Deps] update `@es-shims/api`, `array.prototype.map`, `function.prototype.name`, `object-inspect` [`d62d072`](https://github.com/es-shims/Date/commit/d62d0722ed78f99f210cf4ca6505196072eed02e)
+- [Dev Deps] update to v3 of es-shims API [`c841e93`](https://github.com/es-shims/Date/commit/c841e93ebb6095c0c211dd58b568a490c8337413)
+- [Deps] update `es-abstract`, `globalthis` [`713df00`](https://github.com/es-shims/Date/commit/713df00f78585534fd96d761c54daccb2a537236)
+- [Tests] replace `aud` with `npm audit` [`99f3c45`](https://github.com/es-shims/Date/commit/99f3c45474ba5e0aa3d6e7070c83872199d82fee)
+- [Dev Deps] remove unused deps [`9bb56bf`](https://github.com/es-shims/Date/commit/9bb56bf81ebf24e045e79bcddcbfc943bbb7987d)
+- [Tests] add debug info [`06afe63`](https://github.com/es-shims/Date/commit/06afe63ecdbe715cf038e97871ad37386053d845)
+- [Dev Deps] add missing peer dep [`f4b048d`](https://github.com/es-shims/Date/commit/f4b048db73caaaf7d823f7b72af87da073e314d0)
+
 ## [v2.0.5](https://github.com/es-shims/Date/compare/v2.0.4...v2.0.5) - 2024-03-23
 
 ### Commits
